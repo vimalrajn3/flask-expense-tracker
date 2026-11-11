@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Expense Details</h2>
+    <p><strong>Title:</strong> {{ expense.title }}</p>
+    <p><strong>Category:</strong> {{ expense.category }}</p>
+    <p><strong>Amount:</strong>{{ "%.2f"|format(expense.amount|float) }}</p>
+    
+    <br>
+    <a href="{{ url_for('expense') }}">← Back to Dashboard</a>
+</div>
+{% endblock %}
